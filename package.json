@@ -1,0 +1,23 @@
+{
+  "name": "rhsunat",
+  "version": "1.0.0",
+  "description": "script para obtener los recibos por honorarios de la sunat de forma automatizada",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "git pull & node index.js"
+  },
+  "keywords": [
+    "recibos",
+    "por",
+    "honorarios",
+    "sunat"
+  ],
+  "author": "erick pajares",
+  "license": "ISC",
+  "dependencies": {
+    "csv-parser": "^3.0.0",
+    "dotenv": "^16.4.5",
+    "puppeteer": "^23.6.1"
+  }
+}
