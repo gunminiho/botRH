@@ -1,0 +1,6 @@
+
+    Resumen del Proceso de Emisión de R.H.:
+    Total de Intentos: 3
+    Total Exitosos: 2
+    Total Fallidos: 1
+    

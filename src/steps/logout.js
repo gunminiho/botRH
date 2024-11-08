@@ -1,13 +1,11 @@
-const failed = require("../../index");
 
 const logout = async (page) => {
 
 try {
     await page.waitForSelector("button[id='btnSalir']", { visible: true });
     await page.click("button[id='btnSalir']");
-    console.log("Sesión cerrada exitosamente.");
-    failed = false;
-    return 0;
+    //console.log("Sesión cerrada exitosamente.");
+    return false;
 } catch (error) {
     console.error("Error al intentar cerrar sesión: ", error.message);
 }

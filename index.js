@@ -54,7 +54,7 @@ let failed = false;
         try {
             if (failed) {
                 failed = await logoutFail(page); // Asegurarse de cerrar cualquier sesión antes de iniciar una nueva
-                
+
             }
             await login(page, dni, clavesol);
 
@@ -80,11 +80,11 @@ let failed = false;
             await logout(page);  // Desloguearse al terminar el proceso para el usuario actual
 
         } catch (error) {
+            await logout(page);
             console.error(`Error con el DNI ${dni} no se pudo generar R.H, el error que se encontró fue: `, error.message);
             fallidos.push({ dni, error: error.message });
-            failed = true;
             // Intentar desloguearse en caso de error antes de continuar con el siguiente usuario
-            await logoutFail(page);
+            failed = await logoutFail(page);
         }
     }
 
